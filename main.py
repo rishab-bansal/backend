@@ -4,7 +4,7 @@ app = FastAPI()
 
 @app.get("/")
 def home():
-    return {"message": "Backend is on work!"}
+    return {"message": "Backend showing the result!"}
 
 @app.get("/test")
 def test():
