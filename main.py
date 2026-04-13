@@ -1,5 +1,10 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
 
 app = FastAPI()
 
@@ -18,3 +23,15 @@ def home():
 @app.get("/test")
 def test():
     return {"status": "success"}
+
+@app.websocket("/ws")
+async def websocket_endpoint(websocket: WebSocket):
+  await websocket.accept()
+  logger.info("WebSocket client connected")
+  try:
+    while True:
+      data = await websocket.receive_text()
+      logger.info(f"Received: {data}")
+      await websocket.send_text(f"Hello over WebSocket!")
+  except WebSocketDisconnect:
+    logger.info("Client disconnected")
