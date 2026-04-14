@@ -1,12 +1,17 @@
-from fastapi import FastAPI, WebSocket, WebSocketDisconnect
+from fastapi import FastAPI, WebSocket, WebSocketDisconnect, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.templating import Jinja2Templates
 import logging
+import os
+from fastapi.staticfiles import StaticFiles
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-
+templates = Jinja2Templates(directory = "templates");
 app = FastAPI()
+
+app.mount("/static", StaticFiles(directory="static"), name="static") # For implementing css on template
 
 app.add_middleware(
     CORSMiddleware,
@@ -17,8 +22,8 @@ app.add_middleware(
 )
 
 @app.get("/")
-def home():
-    return {"message": "Backend showing"}
+def home(request: Request):
+    return templates.TemplateResponse("temp.html", {"request": request})
 
 @app.get("/test")
 def test():
