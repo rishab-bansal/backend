@@ -26,6 +26,7 @@ def test():
 
 @app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket):
+  print("Incoming WS request")  # ADD THIS
   await websocket.accept()
   logger.info("WebSocket client connected")
   try:
