@@ -25,7 +25,7 @@ app.add_middleware(
 
 @app.get("/")
 def home(request: Request):
-    return templates.TemplateResponse("temp.html", {"request": request})
+    return templates.TemplateResponse(request = request, name = "temp.html")
 
 @app.get("/test")
 def test():
