@@ -23,6 +23,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/")
+def land(request:Request):
+   return templates.TemplateResponse(request=request, name = "home.html")
+
 @app.get("/{page_name}")
 def home(request: Request, page_name:str):
     return templates.TemplateResponse(request = request, name = f"{page_name}.html", context = {"id":"Get me some", "title":"World"})
