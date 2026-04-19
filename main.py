@@ -25,7 +25,15 @@ app.add_middleware(
 
 @app.get("/")
 def home(request: Request):
-    return templates.TemplateResponse(request = request, name = "temp.html")
+    return templates.TemplateResponse(request = request, name = "temp.html", context = {"id":"Get me some", "title":"World"})
+
+@app.get("/resume")
+def resume(request:Request):
+   return templates.TemplateResponse(request = request, name = "temp.html", context = {"id": "Here is my resume"})
+@app.get("/projects")
+def projects(request: Request):
+    return templates.TemplateResponse(request = request, name = "temp.html", context = {"id":"<h1>Here are my projects</h1>"})
+
 
 @app.get("/test")
 def test():

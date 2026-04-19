@@ -12,29 +12,19 @@
         rel="stylesheet">
     
     <link rel="stylesheet" href="/static/style.css">
-    </style>
+
+    <!-- <title>{% block title %}{{ title }}{% endblock title %}</title> -->
+
 </head>
 
 <body>
     <header>
-        <nav>
-            <div class="left">
-                <a href="index.html">Portfolio Website</a>
-            </div>
-
-            <div class="right">
-                <ul>
-                    <li><a href="index.html"> Home</a></li>
-                    <li><a href="resume.html"> Resume</a></li>
-                    <li><a href="projects.html"> Projects</a></li>
-                </ul>
-            </div>
-        </nav>
-        
+        {% include "navbar.html" %}
     </header>
 
     <main>
-        
+    <!-- {% block content %}{% endblock content %} -->
+     <h1>Hello</h1>
     </main>
 
     <footer>
