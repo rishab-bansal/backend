@@ -1,5 +1,19 @@
 {% extends "temp.html" %}
 
 {% block content %}
-<h1>Hello, welcome to {{title}}</h1>
+<section class="firstSection">
+            <div class="leftSection">
+                <span>Hi, My name is <span class = "cyan">Rishab Bansal</span> and I have created this website to showcase my latest portfolio.</span>
+                <hr>
+                <ul class="list">
+                    <li><a href="/resume" class = "cyan"> Resume</a></li>
+                    <li><a href="/projects" class = "cyan"> Projects</a></li>
+                </ul>
+                
+            </div>
+            
+            <div class="rightSection">
+                <img src="/static/images/front.png" alt="">
+            </div>
+        </section>
 {% endblock content %}

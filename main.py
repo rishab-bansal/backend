@@ -23,17 +23,21 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/")
-def home(request: Request):
-    return templates.TemplateResponse(request = request, name = "temp.html", context = {"id":"Get me some", "title":"World"})
+@app.get("/{page_name}")
+def home(request: Request, page_name:str):
+    return templates.TemplateResponse(request = request, name = f"{page_name}.html", context = {"id":"Get me some", "title":"World"})
 
-@app.get("/resume")
-def resume(request:Request):
-   return templates.TemplateResponse(request = request, name = "temp.html", context = {"id": "Here is my resume"})
-@app.get("/projects")
-def projects(request: Request):
-    return templates.TemplateResponse(request = request, name = "temp.html", context = {"id":"<h1>Here are my projects</h1>"})
+# @app.get("/resume")
+# def resume(request:Request):
+#    return templates.TemplateResponse(request = request, name = "resume.html", context = {"id": "Here is my resume"})
 
+# @app.get("/projects")
+# def projects(request: Request):
+#     return templates.TemplateResponse(request = request, name = "projects.html", context = {"id":"<h1>Here are my projects</h1>"})
+
+@app.get("/projects/{page_name}")
+def projects(request: Request, page_name: str):
+    return templates.TemplateResponse(request = request, name = f"projects/{page_name}.html", context = {"id":"<h1>Here are my projects</h1>"})
 
 @app.get("/test")
 def test():
