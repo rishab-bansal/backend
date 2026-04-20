@@ -114,7 +114,8 @@
         }
 
         #canvas {
-            background: green;
-            margin: 100px;
-            border: 5px solid black;
+            /* margin: 10px; */
+            display: block;
+            /* border: 5px solid black; */
+            width: 100%;
         }    

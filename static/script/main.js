@@ -11,8 +11,11 @@ ws.onopen = () => {
 }
 ws.onerror = (e)=>console.log("Error",e);
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.width = window.offsetWidth;
+canvas.height = window.offsetHeight;
+
+ctx.fillStyle = "green";
+ctx.fillRect(10, 10, 150, 100);
 
 function funct(){
     document.getElementById("canvas").margin = 2;
