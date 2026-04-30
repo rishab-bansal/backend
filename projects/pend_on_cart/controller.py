@@ -30,7 +30,7 @@ def NoController(robo, rkc):
   # Computing the controller output
   K = np.matrix([0,  0,  0,  0])
   feedback = -setpoint + s
-  F = float(- K @ feedback)
+  F = float((- K @ feedback)[0,0])
 
   # F = 0
   # if ct == 0:
