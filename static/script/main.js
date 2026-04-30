@@ -1,6 +1,6 @@
 // Connecting with the backend using websocket
 import { state } from "./sb_state.js";
-const ws = new WebSocket('wss://test-backend-7bl5.onrender.com/ws');
+const ws = new WebSocket('wss://rishab-bansal.onrender.com/ws');
 // const ws = new WebSocket("ws://127.0.0.1:8000/ws")
 let flag = true;
 if(flag){
