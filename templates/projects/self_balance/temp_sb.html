@@ -1,0 +1,43 @@
+{% extends "temp.html" %}
+
+{% block content%}
+<h1 style = "display:block; text-align: center; margin:20px; color: darkcyan;">Self Balancing Robot</h1>
+<hr>
+<div class = "firstSection">
+    <div style = "width: 15%;" class = "leftSection">
+        <ul style = "list-style: none;" class = "left">
+            <li class = "select"><a href="/projects/self_balance/desc">Without a controller</a></li>
+            <li class = "select"><a href="/projects/self_balance/lqr">LQR</a></li>
+            <!-- <li class = "select"><a href="/projects/self_balance/lqr">LQR and pole placement</a></li>
+            <li class = "select"><a href="/projects/self_balance/lqr">LQR and pole placement</a></li>
+            <li class = "select"><a href="/projects/self_balance/lqr">LQR and pole placement</a></li>
+            <li class = "select"><a href="/projects/self_balance/lqr">LQR and pole placement</a></li>
+            <li class = "select"><a href="/projects/self_balance/lqr">LQR and pole placement</a></li>
+            <li class = "select"><a href="/projects/self_balance/lqr">LQR and pole placement</a></li>
+            <li class = "select"><a href="/projects/self_balance/lqr">LQR and pole placement</a></li>
+            <li class = "select"><a href="/projects/self_balance/lqr">LQR and pole placement</a></li>
+            <li class = "select"><a href="/projects/self_balance/lqr">LQR and pole placement</a></li>
+            <li class = "select"><a href="/projects/self_balance/lqr">LQR and pole placement</a></li> -->
+        </ul>
+    </div>
+
+    <div style = "align-items: center; width: 80%; height:100%;">
+
+        {% block heading %}
+
+        {% endblock heading %}
+
+        <canvas id = "canvas_sb" width = 1200 height = "400" style = "background-color: lightcyan; display:block; width: 90%; height: 100%; border: 5px solid black; border-radius: 5px; margin:0 auto">
+
+        </canvas>
+
+        {% block description %}
+
+        {% endblock description %}
+    </div>
+</div>
+
+{% block scripts %}
+<script type="module" src = "/static/script/sb.js?v=1"></script>
+{% endblock scripts %}
+{% endblock content%}
