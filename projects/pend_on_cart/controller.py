@@ -7,7 +7,7 @@ def LQR(robo, rkc):
   # Computing the controller output
   K = np.matrix([-1.0000,   -2.0317,  -32.8597,  -10.0141])
   feedback = -setpoint + s
-  F = float(- K @ feedback)
+  F = float((- K @ feedback)[0,0])
 
   # F = 0
   # if ct == 0:

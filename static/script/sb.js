@@ -63,8 +63,9 @@ function drawMarkers(){
     // Simulation Time
     ctx.font = '20px Arial';
     ctx.fillStyle = "black";
-    ctx.fillText("Simulation Time: " + Math.round(state.time*100)/100, 0.8*cw, 0.9*ch);
-
+    ctx.fillText("Simulation Time: " + Math.round(state.time*100)/100, 0.5*cw, 0.9*ch);
+    ctx.fillText(" sec", 0.65*cw, 0.9*ch);
+    
     // Distance Markers
     const d = px_per_meter;
     const n = cw/d;
