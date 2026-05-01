@@ -1,43 +1,45 @@
 {% extends "temp.html" %}
 
 {% block content%}
-<h1 style = "display:block; text-align: center; margin:20px; color: darkcyan;">Self Balancing Robot</h1>
-<hr>
-<div class = "firstSection">
-    <div style = "width: 15%;" class = "leftSection">
-        <ul style = "list-style: none;" class = "left">
-            <li class = "select"><a href="/projects/self_balance/desc">Without a controller</a></li>
-            <li class = "select"><a href="/projects/self_balance/lqr">LQR</a></li>
-            <!-- <li class = "select"><a href="/projects/self_balance/lqr">LQR and pole placement</a></li>
-            <li class = "select"><a href="/projects/self_balance/lqr">LQR and pole placement</a></li>
-            <li class = "select"><a href="/projects/self_balance/lqr">LQR and pole placement</a></li>
-            <li class = "select"><a href="/projects/self_balance/lqr">LQR and pole placement</a></li>
-            <li class = "select"><a href="/projects/self_balance/lqr">LQR and pole placement</a></li>
-            <li class = "select"><a href="/projects/self_balance/lqr">LQR and pole placement</a></li>
-            <li class = "select"><a href="/projects/self_balance/lqr">LQR and pole placement</a></li>
-            <li class = "select"><a href="/projects/self_balance/lqr">LQR and pole placement</a></li>
-            <li class = "select"><a href="/projects/self_balance/lqr">LQR and pole placement</a></li>
-            <li class = "select"><a href="/projects/self_balance/lqr">LQR and pole placement</a></li> -->
-        </ul>
+
+<!-- Project name -->
+<h1 style = "display:block;font-size: 1.5vw; margin:2vw; color: darkcyan;">Self Balancing Robot</h1>
+
+<!-- List of strategies -->
+<div>
+    <ul id = "stratls">
+        <li ><a href="/projects/self_balance/desc">Without a controller</a></li>
+        <li><a href="/projects/self_balance/lqr">LQR</a></li>
+    </ul>
+</div>
+
+<!-- Strategy Description-->
+
+<div style="background-color: white;padding:1vw 1vw;">
+
+    <!-- Heading for the strategy is use -->
+    <h3 style="font-size: 1.4vw; color: black;">{% block heading %} {% endblock heading %}</h3>
+    
+<!-- Content  -->
+<div style = "display:block; width:100%; align-items: center;">
+    
+    <!-- Animation canvas -->
+    <div style = "text-align: center;margin-top: 1.5vw;">
+        <p style="font-size: 2vw;">Animation</p>
+        <canvas id = "canvas_sb"  style=" border: 0.2vw solid black; border-radius: 0.4vw;text-align: center;"></canvas>
+        <div style = " text-align: center;">
+            <button id = "play" data-value="{{strategy}}"> Start Simulation</button>
+        </div>
     </div>
 
-    <div style = "align-items: center; width: 80%; height:100%;">
+    {% block description %}
 
-        {% block heading %}
+    {% endblock description %}
+</div>
 
-        {% endblock heading %}
-
-        <canvas id = "canvas_sb" width = 1200 height = "400" style = "background-color: lightcyan; display:block; width: 90%; height: 100%; border: 5px solid black; border-radius: 5px; margin:0 auto">
-
-        </canvas>
-
-        {% block description %}
-
-        {% endblock description %}
-    </div>
 </div>
 
 {% block scripts %}
-<script type="module" src = "/static/script/sb.js?v=1"></script>
+<script type="module" src = "/static/script/sb.js?v=2"></script>
 {% endblock scripts %}
 {% endblock content%}

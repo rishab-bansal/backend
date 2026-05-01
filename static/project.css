@@ -1,0 +1,37 @@
+#stratls{
+    /* list-style: disc; */
+}
+
+#stratls li{
+    border-bottom: 0.2vw solid black;
+    padding: 10px;
+    font-size: 1.2vw;
+    text-align: center;
+}
+#stratls li a{
+    text-decoration: none;
+    color:black;
+}
+
+#stratls li:hover{
+    cursor:pointer;
+    font-weight:bold;
+}
+
+
+#play{
+    background-color: darkcyan; 
+    color:white; 
+    padding: 0.5vw; 
+    font-size: 1vw;
+    margin: 10px;
+    border-radius: 5px;
+}
+#play:hover{
+    background-color: teal;
+    cursor:pointer;
+}
+#play:active{
+    background-color: black;
+    cursor:wait;
+}

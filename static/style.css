@@ -127,7 +127,6 @@
             display: flex;
             padding: 20px;
             flex-direction: column;
-            margin-top: 50px;
         }
 
         .first{
@@ -139,6 +138,7 @@
             display: flex;
             justify-content: center;
             list-style: none;
+            margin-top: 3vw;
         }
 
         .list li{
@@ -155,40 +155,4 @@
         .list li a:hover{
             color: white;
             background-color: darkcyan;
-        }
-
-        hr{
-            margin: 25px 0;
-        }
-
-        .select{
-            background-color: black;
-            color:white;
-            border-radius: 5px;
-            margin: 5px;
-            padding: 10px;
-            font-size: 1.4rem;
-        }
-        
-        .select a:hover{
-            /* font-size: 1.5rem; */
-            cursor:pointer;
-        }
-
-
-        #play{
-            background-color: darkcyan; 
-            color:white; 
-            padding: 10px; 
-            font-size: 1rem;
-            margin: 10px;
-            border-radius: 5px;
-        }
-        #play:hover{
-            background-color: teal;
-            cursor:pointer;
-        }
-        #play:active{
-            background-color: black;
-            cursor:wait;
         }
