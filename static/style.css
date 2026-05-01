@@ -16,7 +16,7 @@
             display:flex;
             justify-content: space-around;
             align-items: center;
-            height: 5vw;
+            height: 80px;
             background-color: darkcyan;
             color:white
         }
@@ -26,6 +26,7 @@
         }
 
         nav ul li{
+            font-size: 20px;
             list-style: none;
             margin:0 23px;
         }
@@ -36,17 +37,18 @@
         }
 
         nav ul li a:hover{
-            font-size: 0.9vw;
+            font-size: 21px;
             color:aqua
         }
 
         .left{
-            font-size: 1.5vw;
+            font-size: 30px;
         }
         .left a{
             text-decoration: none;
             color: white;
         }
+
         main{
             flex: 1;
         }
@@ -59,19 +61,63 @@
         .firstSection div{
             width: 40%;
         }
-        .leftSection{
-            font-size: 2vw;
+
+        
+        .rightSection{
+            font-size: 30px;
             display:flex;
             flex-direction: column;
             align-items: center;
         }
-        .rightSection{
+        .leftSection{
             display:flex;
             justify-content: center;
         }
-        .rightSection img{
+        .leftSection img{
             width: 100%;
         }
+        
+        /* @media screen and (max-width:) */
+        @media screen and (max-width:800px){
+
+            nav{
+                height:10vw;
+            }
+            .left{
+                font-size: 4vw;
+            }
+
+            nav ul li{
+                font-size: 2vw;
+            }
+            nav ul li a:hover{
+                font-size: 2.1vw;
+            }
+            .firstSection{
+                display: block;
+                width: 100%;
+            }
+            .firstSection div{
+                /* display:block; */
+                width:100%;
+            }
+            .leftSection img{
+                margin: 0 auto;
+                width:40%;
+            }
+            
+            .rightSection{
+                margin: 0 auto;
+                font-size: 4vw;
+                /* padding: 10px; */
+            }
+
+            .footer{
+                font-size: 3vw;
+                padding:1vw;
+            }
+        }
+                        
         .cyan{
             color: darkcyan;
         }
