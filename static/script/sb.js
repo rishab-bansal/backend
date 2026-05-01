@@ -13,8 +13,17 @@ var robot;
 function resizeCanvas(){
 
     const dpr = window.devicePixelRatio || 1;
-    const width = document.documentElement.clientWidth/2;
-    const height = width/2;
+    let width;
+    let height = width/2;
+    if(document.documentElement.clientWidth > 1000){
+        width = document.documentElement.clientWidth/2;
+        height = width/2;
+    }
+    else{
+        height = document.documentElement.clientHeight/2;
+        width = document.documentElement.clientWidth/1.1;//height/2;
+    }
+    console.log(width,height);
     cw = width;
     ch = height;
     // Set CSS size (no overflow)

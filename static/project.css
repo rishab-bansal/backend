@@ -18,6 +18,9 @@
     font-weight:bold;
 }
 
+.heading{
+    font-size: 2vw;
+}
 
 #play{
     background-color: darkcyan; 
@@ -25,7 +28,7 @@
     padding: 0.5vw; 
     font-size: 1vw;
     margin: 10px;
-    border-radius: 5px;
+    border-radius: 1vw;
 }
 #play:hover{
     background-color: teal;
@@ -34,4 +37,18 @@
 #play:active{
     background-color: black;
     cursor:wait;
+}
+
+@media screen and (max-width:800px){
+    #stratls li{
+        font-size: 2vw;
+    }
+
+    .heading{
+        font-size: 5vw;
+    }
+    #play{
+        padding: 1vw;
+        font-size: 4vw;
+    }
 }
