@@ -14,7 +14,7 @@ function resizeCanvas(){
 
     const dpr = window.devicePixelRatio || 1;
     let width;
-    let height = width/2;
+    let height;
     if(document.documentElement.clientWidth > 1000){
         width = document.documentElement.clientWidth/2;
         height = width/2;
@@ -23,7 +23,7 @@ function resizeCanvas(){
         height = document.documentElement.clientHeight/2;
         width = document.documentElement.clientWidth/1.1;//height/2;
     }
-    console.log(width,height);
+    
     cw = width;
     ch = height;
     // Set CSS size (no overflow)
